@@ -14,7 +14,7 @@ class PengeluaranController extends Controller
      */
     public function index()
     {
-        $pengeluaran = Pengeluaran::paginate(10);
+        $pengeluaran = Pengeluaran::all();
   
         return response()->json($pengeluaran);
     }
