@@ -115,4 +115,10 @@ $app->router->group([
 $app->withEloquent();
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
+$app->register(Fruitcake\Cors\CorsServiceProvider::class);
+$app->configure('cors');
+$app->middleware([
+    Fruitcake\Cors\HandleCors::class,
+]);
+
 return $app;
