@@ -21,6 +21,7 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api/'], function () use ($router) {
     $router->get('pengeluaran', 'PengeluaranController@index');
     $router->post('pengeluaran', 'PengeluaranController@store');
+    $router->get('pengeluaran/tanggal/{id}', 'PengeluaranController@getPengeluaranByDate');
     $router->get('pengeluaran/{id}', 'PengeluaranController@show');
     $router->put('pengeluaran/{id}', 'PengeluaranController@update');
     $router->delete('pengeluaran/{id}', 'PengeluaranController@destroy');
