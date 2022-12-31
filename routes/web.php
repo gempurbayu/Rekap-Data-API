@@ -42,3 +42,9 @@ Route::get('/clear', function() {
     return "Cleared!";
 
 });
+
+Route::get('/composer-update', function () {
+    chdir('../');
+    $output=exec('composer update');
+  echo "<pre>$output</pre>";
+ });
