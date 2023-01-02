@@ -37,7 +37,7 @@ class AuthController extends Controller
             }
         } else {
             if (! $token = auth()->attempt($credentials)) {
-                return response()->json(['error' => 'email tidak ditemukan'], 401);
+                return response()->json(['error' => 'email / password salah'], 401);
             }
         }
 
